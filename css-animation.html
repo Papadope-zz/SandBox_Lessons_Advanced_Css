@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS ANIMATIONS</title>
+    <style>
+    * {
+      box-sizing: border-box;
+    }
+    #ball,
+    #circle { 
+      height: 64px;
+      width: 64px;
+      position: relative;
+      background-size: 100%; /* Relative size according to element (div#circle) */
+      background-image: url(https://i.ya-webdesign.com/images/soccer-ball-icon-png-16.png); 
+      left: 0px;
+      animation-duration: 4s;
+      animation-name: shoot;
+      animation-delay: 200ms;
+      animation-iteration-count: 0; /* Will never run */
+      animation-iteration-count: infinite;
+      /* transform: scale(0.75) translateY(40px); */
+    }
+    #ball { 
+      animation-duration: 2s; 
+      animation-direction: normal;
+      animation-direction: reverse;
+      animation-direction: alternate;
+      /* transform: scale(1.2) translateY(50px) rotate(0deg); */
+    }
+    /* #ball:hover, #circle:hover { animation-name: shoot; } */
+    @keyframes shoot {
+      0% { left: 0; transform: rotate(0); }
+      60% { left: 200px; transform: rotate(180deg); }
+      70% { left: 230px; transform: rotate(200deg); }
+      100% { left: 250px; transform: rotate(210deg); }
+    }
+    </style>
+  </head>
+  <body>
+    <div id="circle"></div>
+    <div id="ball"></div>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes">The @keyframes CSS function</a>
+  </body>
+</html>

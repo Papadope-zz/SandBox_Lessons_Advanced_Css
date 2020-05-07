@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Index</title>
+    <style>
+    * {
+      box-sizing: border-box;
+    }
+    #coin {
+      /* border: 1px solid black; */
+      background-image: url(https://raw.githubusercontent.com/kostasx/EventLoop/master/Education/tmp/coin-sprite.png);
+      width: 440px;
+      width: 44px;
+      height: 40px;
+      background-position-x: 0px;
+    }
+    </style>
+  </head>
+  <body>
+
+    <!-- 440 x 40 -->
+    <!-- <img src="https://raw.githubusercontent.com/kostasx/EventLoop/master/Education/tmp/coin-sprite.png" alt="coins"> -->
+    <div id="coin"></div>
+    <script>
+      const coin = document.querySelector("#coin");
+      let multiplier = 0;
+      setInterval(()=>{
+        coin.style.backgroundPositionX = ( multiplier * 44 ) + "px";
+        multiplier++;
+      }, 50);
+    </script>      
+  </body>
+</html>
